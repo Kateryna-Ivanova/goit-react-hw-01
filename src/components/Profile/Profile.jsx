@@ -1,4 +1,5 @@
-import style from "./profile.module.css";
+// import style from "./profile.module.css";
+import style from "./Profile.module.css"
 export const Profile = ({
     avatar,
     name,
