@@ -1,10 +1,18 @@
+import style from "./FriendListItem.module.css";
+import clsx from "clsx";
 export const FriendListItem = (props) => {
-  console.log(props);
   return (
-    <div>
+    <div className={style.itemsWrapper}>
       <img src={props.avatar} alt="Avatar" width="48" />
-      <p>Friend name {props.name}</p>
-      <p>Friend status {props.isOnline}</p>
+      <p className={style.text}>{props.name}</p>
+      <p
+        className={clsx(
+          style.isOnline,
+          props.isOnline ? style.online : style.offline
+        )}
+      >
+        {props.isOnline ? "Online" : "Offline"}
+      </p>
     </div>
   );
 };
